@@ -1,8 +1,7 @@
 # Galaxy - Computational Chemistry Tools
 
 # Builds on 
-FROM bgruening/galaxy-stable
-#FROM quay.io/repository/bgruening/galaxy-chemicaltoolbox
+FROM quay.io/bgruening/galaxy-chemicaltoolbox:18.01
 
 ENV GALAXY_CONFIG_BRAND="Computational Chemistry"
 
