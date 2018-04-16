@@ -1,17 +1,15 @@
 # Galaxy - Computational Chemistry Tools
 
-# Builds on the ChemicalToolBox
-FROM quay.io/repository/bgruening/galaxy-chemicaltoolbox
+# Builds on 
+FROM bgruening/galaxy-stable
+#FROM quay.io/repository/bgruening/galaxy-chemicaltoolbox
 
-LABEL maintainer='Chris Barnett chrisbarnettster@gmail.com, Tharindu Senapathi, Björn A. Grüning, bjoern.gruening@gmail.com'
+ENV GALAXY_CONFIG_BRAND="Computational Chemistry"
 
-ENV GALAXY_CONFIG_BRAND=Computational Chemistry
-
-# Include all needed scripts and libraries from the host
-# compressed archives will be extracted automatically
-#ADD ./Jmoleditor.tar.bz2 /galaxy-central/
+WORKDIR /galaxy-central
 
 #. No tools yet, this will not do anything!!!!!!!!!!!!
+#. Install Tools
 #ADD computationalchemistry_tools.yml $GALAXY_ROOT/tools.yaml
 #RUN install-tools $GALAXY_ROOT/tools.yaml && \
 #    /tool_deps/_conda/bin/conda clean --tarballs --yes > /dev/null && \
